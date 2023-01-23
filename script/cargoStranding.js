@@ -187,10 +187,6 @@ class Pool {
         if (table == null) {
             throw new Error('Failed to find table')
         }
-        // var summary = document.getElementById('tbSummary')
-        // if (summary == null) {
-        //     throw new Error("Failed to get summary table")
-        // }
         var rowResins = document.getElementById('trResins')
         if (rowResins == null) {
             throw new Error("Failed to get row of Resins in summary")
@@ -398,24 +394,3 @@ class Pool {
 }
 
 var pool = new Pool()
-
-
-function swapGrey() {
-    if (edit) {
-        for (const button of document.getElementsByClassName('btTypes')) {
-            button.removeAttribute('disabled')
-        }
-        for (const text of document.getElementsByClassName('ttTypes')) {
-            text.setAttribute('hidden', '')
-        }
-        edit = 0
-    } else {
-        for (const button of document.getElementsByClassName('btTypes')) {
-            button.setAttribute('disabled', '')
-        }
-        for (const text of document.getElementsByClassName('ttTypes')) {
-            text.removeAttribute('hidden')
-        }
-        edit = 1
-    }
-}

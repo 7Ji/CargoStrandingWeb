@@ -5,7 +5,6 @@
     border-width: 5px 5px 5px 5px;
     border-color:rgb(179, 210, 179);
     margin-bottom: 25px;
-    /* color: white; */
 }
 
 .tb th {
@@ -32,20 +31,3 @@
 #tbSummary tr :first-child {
     width: 110px;
 }
-/* 
-.btMaterialTypes button {
-    background-color: #169164;
-    border: 1px solid green;
-    color: white;
-    padding: 10px 24px;
-    cursor: pointer;
-    display: block;
-    width: 16%;
-}
-.btMaterialTypes button:not(:last-child) {
-    border-bottom: none;
-}
-.btMaterialTypes button:hover {
-    color: black;
-    background-color: rgb(183, 242, 183);
-} */
