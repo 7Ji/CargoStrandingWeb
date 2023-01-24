@@ -86,35 +86,49 @@
             </tr>
         </table>
         <h2>Requests</h2>
-        <table class="tb" id="tbRequests">
-            <tr>
-                <th>ID</th>
-                <th>Type</th>
-                <th>Needed / Added</th>
-                <th>(Empty) / Total</th>
-                <th>Materials</th>
-                <th>Action</th>
-            </tr>
+        <table class="tb">
+            <thead>
+                <tr>
+                    <th class="columnID">ID</th>
+                    <th class="columnType">Type</th>
+                    <th class="columnQuantity">Needed / Added</th>
+                    <th class="columnTotal">(Empty) / Total</th>
+                    <th class="columnList">List</th>
+                    <th class="columnWeight">Weight</th>
+                    <th class="columnVolume">Volume</th>
+                    <th class="columnAction">Action</th>
+                    <th class="columnSelect">Select</th>
+                </tr>
+            </thead>
+            <tbody id="tbRequests"></tbody>
         </table>
-        <div class="btMaterialTypes">
+        
+        <div id="divAddRequest">
             <h3>Add a new request of ...</h3>
-            <i id="ttTypes" hidden>Impossible to do it now, confirm the last request above first<br></i>
+            <p hidden>Press the key written inside the parenthesis to select one without using mouse/touchpad</p>
             <button class="btTypes" id="btResins"
-                    onclick="pool.newRequest(MaterialTypes.Resins)">
-                        Resins</button>
+                    onclick="tableRequests.newRequest(MaterialTypes.Resins)">
+                        Resins <i class="iHotkeyHints">(R/r)</i></button>
             <button class="btTypes" id="btMetals"
-                    onclick="pool.newRequest(MaterialTypes.Metals)">
-                        Metals</button>
+                    onclick="tableRequests.newRequest(MaterialTypes.Metals)">
+                        Metals <i class="iHotkeyHints">(M/m)</i></button>
             <button class="btTypes" id="btCeramics"
-                    onclick="pool.newRequest(MaterialTypes.Ceramics)">
-                        Ceramics</button>
+                    onclick="tableRequests.newRequest(MaterialTypes.Ceramics)">
+                        Ceramics <i class="iHotkeyHints">(C)</i></button>
             <button class="btTypes" id="btChemicals"
-                    onclick="pool.newRequest(MaterialTypes.Chemicals)">
-                        Chemicals</button>
+                    onclick="tableRequests.newRequest(MaterialTypes.Chemicals)">
+                        Chemicals <i class="iHotkeyHints">(c)</i></button>
             <button class="btTypes" id="btSpecialAlloys"
-                    onclick="pool.newRequest(MaterialTypes.SpecialAlloys)">
-                        Special Alloys</button>
+                    onclick="tableRequests.newRequest(MaterialTypes.SpecialAlloys)">
+                        Special Alloys <i class="iHotkeyHints">(S/s)</i></button>
+            <h3>Or ..</h3>
+            <button class="btTypes" id="btClearRequests" onclick="tableRequests.clearRequests()">Clear all requests <i class="iHotkeyHints">(Z/z)</i></button>
+            <button class="btTypes" id="btSelectAll" onclick="tableRequests.selectAll()">Select all requests <i class="iHotkeyHints">(A/a)</i></button>
+            <button class="btTypes" id="btUnselectAll" onclick="tableRequests.unselectAll()">Unselect all requests <i class="iHotkeyHints">(U/u)</i></button>
+            <button class="btTypes" id="btDeleteSelected" onclick="tableRequests.deleteSelected()">Delete selected requests <i class="iHotkeyHints">(D/d)</i></button>
         </div>
+        <br>
+        <i>The key inside the parenthesis are hotkeys</i>
         <script src="script/cargoStranding.js"></script>
     </body>
 </html>

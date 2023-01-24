@@ -4,7 +4,7 @@
     border: solid;
     border-width: 5px 5px 5px 5px;
     border-color:rgb(179, 210, 179);
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .tb th {
@@ -30,4 +30,60 @@
 
 #tbSummary tr :first-child {
     width: 110px;
+}
+
+.columnID {
+    min-width: 20px;
+}
+
+.columnType {
+    min-width: 115px;
+}
+
+.columnQuantity {
+    min-width: 110px;
+}
+
+.columnTotal {
+    min-width: 110px;
+}
+
+.columnList {
+    min-width: 200px;
+}
+
+.columnWeight {
+    min-width: 80px;
+}
+
+.columnVolume {
+    min-width: 40px;
+}
+
+.columnAction {
+    min-width: 110px;
+}
+
+.columnSelect {
+    min-width: 20px;
+}
+
+#tbRequests select {
+    min-width: 115px;
+}
+
+.inputQuantities {
+    text-align: center;
+    width: 100px;
+}
+
+.btTypes {
+    background-color: rgb(216, 234, 234);
+    border: solid;
+    border-width: 2px 2px 2px 2px;
+    /* border-color:rgb(179, 210, 179); */
+}
+
+.iHotkeyHints {
+    color: darkolivegreen;
 }
