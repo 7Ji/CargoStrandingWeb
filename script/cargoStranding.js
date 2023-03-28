@@ -114,7 +114,12 @@ class Material extends Cargo {
         var quantity = 0
         for (; quantityId < 7; ++quantityId) {
             quantity = MaterialQuantities[type][quantityId]
-            if (quantity >= quantityNeeded) {
+            if (quantity > quantityNeeded) {
+                if (quantity - quantityNeeded >= MaterialBaseQuantities[type]) {
+                    quantity = MaterialQuantities[type][--quantityId]
+                }
+                break
+            } else if (quantity == quantityNeeded) {
                 break
             }
         }
